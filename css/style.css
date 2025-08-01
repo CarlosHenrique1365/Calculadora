@@ -1,0 +1,138 @@
+@charset "UTF-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* Conatainer calculadora */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+#calc {
+    width: 500px;
+    padding: .5em;
+    background-color: #ffffff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+        0px 4px 6px rgba(0, 0, 0, 0.295),
+        0px 10px 15px rgba(0, 0, 0, 0.329);
+    border-radius: 8px;
+}
+
+#calc h3 {
+    font-size: .8em;
+    font-weight: 300;
+    color: #666;
+}
+
+/* Visor calculadora */
+
+#operations {
+    text-align: right;
+    margin: 10px 10px 25px 10px;
+    box-shadow: inset 0px 6px 10px rgba(0, 0, 0, 0.05),
+        0px 6px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+}
+
+#previous-operation,
+#current-operation {
+    min-height: 1.6em;
+    padding: .2em;
+    overflow-wrap: break-word;/*Quebra a linha para evitar ela atravessar minha calculadora ou os numeros vazar*/
+}
+
+#previous-operation {
+    color: #777;
+}
+
+#current-operation {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+/* Buttons gerais */
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+#buttons-container button {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    height: 4em;
+    font-size: 1.2rem;
+    background-color: #dbdbdb;
+    cursor: pointer;
+    box-shadow:
+        inset 3px 2px 4px rgba(0, 0, 0, 0.096),
+        2px 2px 2px rgba(0, 0, 0, 0.329);
+}
+
+#buttons-container .number {
+    background-color: #f3f3f3;
+}
+
+#buttons-container .operation{
+    background-color: #000000e0;
+    color: #fff;
+}
+
+#buttons-container .operation:hover {
+    background-color: #000000;
+}
+
+#buttons-container button:hover {
+    background-color: #ccc9c9;
+    transition: .3s;
+}
+
+/* Buttons operacoes */
+#clear-entry {
+    background-color: #ff4d4f !important;
+    color: #fff;
+}
+
+#clear-entry:hover {
+    background-color: #e94446 !important;
+}
+
+#clear {
+    background-color: #ffa940 !important;
+    color: #fff;
+}
+
+#clear:hover {
+    background-color: #e79939 !important;
+}
+
+#delete {
+    background-color: #d9d9d9 !important;
+}
+
+#delete:hover {
+    background-color: #ccc9c9 !important;
+}
+#buttons-container #equal-btn {
+    grid-column:  span 2;
+    background-color: #75a5cb;
+}
+
+#buttons-container #equal-btn:hover {
+    background-color: #3a91d8;
+}
